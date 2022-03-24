@@ -68,20 +68,20 @@ class _LoginSesionState extends State<LoginSesion> {
                       fontWeight: FontWeight.bold,
                       color: Color.fromARGB(255, 117, 117, 117)),
                 ),
-                const SizedBox(
-                  height: 40,
+                const Padding(
+                  padding: EdgeInsets.only(top: 40),
                 ),
                 containerText(name: 'Correo electrónico'),
                 _textField(field: 'Email Address'),
-                const SizedBox(
-                  height: 25,
+                const Padding(
+                  padding: EdgeInsets.only(top: 25),
                 ),
                 containerText(name: 'Contraseña'),
                 _textFieldPassword(field: 'Password'),
                 Container(
-                  margin: const EdgeInsets.only(
-                      top: 15, left: 150, right: 5, bottom: 20),
-                  height: 40,
+                  //margin: const EdgeInsets.only(
+                  alignment: Alignment.centerRight,    //top: 15, left: 80, bottom: 20),
+                  height: 65,
                   child: TextButton(
                     onPressed: () {
                       Navigator.push(context, MaterialPageRoute(builder: ((context) => const Recovery())));
@@ -89,7 +89,7 @@ class _LoginSesionState extends State<LoginSesion> {
                     child: const Text(
                       '¿Has olvidado tu contraseña?',
                       style: TextStyle(
-                          fontSize: 14,
+                          fontSize: 16,
                           fontFamily: 'Hack',
                           color: Color.fromRGBO(252, 20, 96, 1)),
                     ),

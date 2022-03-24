@@ -56,7 +56,6 @@ class _RegisterState extends State<Register> {
         child: Container(
           margin: const EdgeInsets.only(top: 30, left: 25, right: 25, bottom: 0),
           width: double.infinity,
-          color: ColorSelect.btnBackgroundBo2,
           child: Column(
             textDirection: TextDirection.ltr,
             children: [
@@ -68,18 +67,18 @@ class _RegisterState extends State<Register> {
                     fontWeight: FontWeight.bold,
                     color: Color.fromARGB(255, 117, 117, 117)),
               ),
-              const SizedBox(
-                height: 40,
+              const Padding(
+                padding: EdgeInsets.only(top: 40),
               ),
               containerText(name: 'Nombre'),
               _textField(field: 'Nombre completo'),
-              const SizedBox(
-                height: 25,
+              const Padding(
+                padding: EdgeInsets.only(top: 25),
               ),
               containerText(name: 'Correo Electrónico'),
               _textField(field: 'Email Address'),
-              const SizedBox(
-                height: 25,
+              const Padding(
+                padding: EdgeInsets.only(top: 25),
               ),
               containerText(name: 'Contraseña'),
               _textFieldPassword(field: 'Password'),
@@ -101,7 +100,6 @@ class _RegisterState extends State<Register> {
         ),
       ),
       bottomNavigationBar: Container(
-        color: Colors.amber,
         height: 100,
         margin: const EdgeInsets.only(left: 25, right: 25, top: 0, bottom: 25),
         child: Column(

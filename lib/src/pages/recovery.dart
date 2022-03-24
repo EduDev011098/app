@@ -66,8 +66,8 @@ class _RecoveryState extends State<Recovery> {
                       fontWeight: FontWeight.bold,
                       color: ColorSelect.txtGreyTitle),
                 ),
-                const SizedBox(
-                  height: 40,
+                const Padding(
+                  padding: EdgeInsets.only(top: 25),
                 ),
                 containerText(name: 'Correo electrónico'),
                 _textField(field: 'Dirección de correo'),
@@ -142,26 +142,26 @@ class _RecoveryState extends State<Recovery> {
         fontFamily: 'Hack');
   }
 
-  TextField _textFieldPassword({required String field}) {
-    return TextField(
-      obscureText: _isHide,
-      decoration: InputDecoration(
-        labelText: 'Password',
-        border: const OutlineInputBorder(
-            borderRadius: BorderRadius.all(Radius.circular(15))),
-        suffixIcon: IconButton(
-          icon: Icon(_isHide ? Icons.visibility : Icons.visibility_off),
-          onPressed: () {
-            setState(
-              () {
-                _isHide = !_isHide;
-              },
-            );
-          },
-        ),
-      ),
-    );
-  }
+  // TextField _textFieldPassword({required String field}) {
+  //   return TextField(
+  //     obscureText: _isHide,
+  //     decoration: InputDecoration(
+  //       labelText: 'Password',
+  //       border: const OutlineInputBorder(
+  //           borderRadius: BorderRadius.all(Radius.circular(15))),
+  //       suffixIcon: IconButton(
+  //         icon: Icon(_isHide ? Icons.visibility : Icons.visibility_off),
+  //         onPressed: () {
+  //           setState(
+  //             () {
+  //               _isHide = !_isHide;
+  //             },
+  //           );
+  //         },
+  //       ),
+  //     ),
+  //   );
+  // }
 
   Container containerText({required String name}) {
     return Container(
